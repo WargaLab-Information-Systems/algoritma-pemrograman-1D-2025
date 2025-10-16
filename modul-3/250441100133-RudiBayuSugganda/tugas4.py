@@ -11,7 +11,7 @@ while True:
         total += subtotal
         struk_barang_str += f"{barang} (x{jumlah}) = Rp{subtotal:,.0f}\n"
         lagi = input("Tambah barang lagi? (y/n): ").lower()
-        if lagi == 'n':
+        if lagi == "n":
             break
     print("\n===== STRUK PEMBELIAN =====")
     print(f"Nama Pembeli:",nama_pembeli)
@@ -22,5 +22,5 @@ while True:
     print("Terima kasih telah berbelanja di IndoMei ")
     print("============================")
     pembeli_lain = input("Apakah ada pembeli berikutnya? (y/n): ").lower()
-    if pembeli_lain == 'n':
+    if pembeli_lain == "n":
         print("Program selesai. Sampai jumpa!")   
