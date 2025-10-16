@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="tuprak 2.1"/>
+        <attribute name="authors" value="IQBAL"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-05 09.16.24 PM"/>
+        <attribute name="created" value="SVFCQUw7REVTS1RPUC1VRUZUMEs0OzIwMjUtMTAtMDU7MDU6NDc6NDYgUE07MjcxMg=="/>
+        <attribute name="edited" value="SVFCQUw7REVTS1RPUC1VRUZUMEs0OzIwMjUtMTAtMDU7MDY6MjM6MjggUE07MTsyODE1"/>
+        <attribute name="edited" value="TGVub3ZvO0RFU0tUT1AtNk03VDlJVjsyMDI1LTEwLTA1OzA5LjE2LjI0IFBNOzE7MzA2MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nilai, kehadiran" type="Integer" array="False" size=""/>
+            <declare name="hasilnilai, status" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Nilai :&quot;" newline="True"/>
+            <input variable="nilai"/>
+            <output expression="&quot;Masukkan presentase kehadiran :&quot;" newline="True"/>
+            <input variable="kehadiran"/>
+            <if expression="nilai &lt; 0 or nilai &gt; 100 or kehadiran &lt; 0 or kehadiran &gt; 100">
+                <then>
+                    <output expression="&quot;Input Tidak Valid&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="nilai &gt;= 85">
+                        <then>
+                            <assign variable="hasilnilai" expression="&quot;A&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="nilai &gt;= 70">
+                                <then>
+                                    <assign variable="hasilnilai" expression="&quot;B&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="nilai &gt;= 60">
+                                        <then>
+                                            <assign variable="hasilnilai" expression="&quot;C&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="nilai &gt;= 50">
+                                                <then>
+                                                    <assign variable="hasilnilai" expression="&quot;D&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="hasilnilai" expression="&quot;E&quot;"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <if expression="nilai &gt;=85 AND kehadiran &gt;=90">
+                        <then>
+                            <assign variable="status" expression="&quot;Lulus dengan pujian!&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="nilai &gt;= 50">
+                                <then>
+                                    <assign variable="status" expression="&quot;Lulus&quot;"/>
+                                </then>
+                                <else>
+                                    <assign variable="status" expression="&quot;Tidak Lulus&quot;"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="nilai" newline="True"/>
+            <output expression="&quot;Status :&quot; &amp;status" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
