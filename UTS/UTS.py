@@ -17,4 +17,3 @@ while motor_matic > 3:
 
     kupon ="AconkGG"
     diskon = 0.5
-
