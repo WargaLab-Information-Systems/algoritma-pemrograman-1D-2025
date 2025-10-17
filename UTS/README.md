@@ -1,8 +1,5 @@
-# Repository praktikum Algoritma Pemrograman 1A-2025
+Pada jawaban soal uts merupakan program rental motor aconk dengan sebuah kriteria
+program menggunakan input jadi program akan meminta data dari penggguna yaitu berapa lama hari penyewaan dan motor jenis apa yang akan di sewa
 
-**Repository Praktikum ALPRO-1A-2025.**
 
-Kumpulkan Tugas di folder ini yang sudah dibuat, penamaan folder dengan **format NIM-NamaLengkap-NamaLengkapAsprak**, dan untuk nama tidak menggunakan spasi, namun diganti dengan huruf kapital di setiap nama atau awal kalimat
-contoh: **230441100026-Ar'raffiAbqoriNurAzizi-AsprakKakRapi**
 
-Kumpulkan tugas yang sudah dibuat di folder yang sudah disediakan dan kumpulkan tugas ketika sudah melakukan asistensi kepada Asisten Praktikum.
