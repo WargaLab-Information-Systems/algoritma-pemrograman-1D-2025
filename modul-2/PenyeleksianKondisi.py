@@ -139,32 +139,33 @@
 # berdasarkan jenis kendaraan, metode pembayaran, dan waktu pembayaran
 # (jam sepi atau tidak). Gunakan struktur penyeleksian kondisi yang
 # sesuai untuk menyelesaikan masalah ini.
-# jenis_kendaraan = input("Masukkan jenis kendaraan (mobil pribadi/truk kecil/truk besar): ").lower()
-# metode_pembayaran = input("Masukkan metode pembayaran (e-money/tunai): ").lower()
-# waktu_pembayaran = int(input("Masukkan jam pembayaran (0-23): "))
-# if jenis_kendaraan == "mobil pribadi":
-#     tarif_dasar = 15000
-# elif jenis_kendaraan == "truk kecil":
-#     tarif_dasar = 25000
-# elif jenis_kendaraan == "truk besar":
-#     tarif_dasar = 40000
-# else:
-    # print("Jenis kendaraan tidak valid")
-#     tarif_dasar = 0
-# diskon = 0
-# if metode_pembayaran == "e-money":
-#     if 23 <= waktu_pembayaran or waktu_pembayaran < 5:
-#         diskon = 0.20
-#     else: 
-#         diskon = 0.10
-# elif metode_pembayaran == "tunai":
-#     diskon = 0
-# else:
-#     print("Metode pembayaran tidak valid")
-#     diskon = 0
-# tarif_akhir = tarif_dasar * (1 - diskon)
-# if tarif_dasar > 0:
-#     print(f"Tarif tol yang harus dibayar: Rp{tarif_akhir:.2f}")
+
+jenis_kendaraan = input("Masukkan jenis kendaraan (mobil pribadi/truk kecil/truk besar): ").lower()
+metode_pembayaran = input("Masukkan metode pembayaran (e-money/tunai): ").lower()
+waktu_pembayaran = int(input("Masukkan jam pembayaran (0-23): "))
+if jenis_kendaraan == "mobil pribadi":
+    tarif_dasar = 15000
+elif jenis_kendaraan == "truk kecil":
+    tarif_dasar = 25000
+elif jenis_kendaraan == "truk besar":
+    tarif_dasar = 40000
+else:
+    print("Jenis kendaraan tidak valid")
+    tarif_dasar = 0
+diskon = 0
+if metode_pembayaran == "e-money":
+    if 23 <= waktu_pembayaran or waktu_pembayaran < 5:
+        diskon = 0.20
+    else: 
+        diskon = 0.10
+elif metode_pembayaran == "tunai":
+    diskon = 0
+else:
+    print("Metode pembayaran tidak valid")
+    diskon = 0
+tarif_akhir = tarif_dasar * (1 - diskon)
+if tarif_dasar > 0:
+    print(f"Tarif tol yang harus dibayar: Rp{tarif_akhir:.2f}")
 
 
 

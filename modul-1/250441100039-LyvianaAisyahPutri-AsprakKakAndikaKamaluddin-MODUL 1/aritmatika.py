@@ -87,40 +87,40 @@
 # print("Nilai String:", nilai_string)
 
 # #Soal 1
-# #Meminta input dari user
-# harga_buku = int(input("Masukkan harga buku: "))
-# harga_pensil = int(input("Masukkan harga pensil: "))
-# jumlah_buku = int(input("Masukkan jumlah buku: "))
-# jumlah_pensil = int(input("Masukkan jumlah pensil: "))
-# total = (jumlah_buku * harga_buku) + (jumlah_pensil * harga_pensil)
-# pajak = 0.10 * total
-# total_bayar = total + pajak
-# print("Total sebelum pajak:", total)
-# print("Pajak (10%):", int(pajak))
-# print("Total yang harus dibayar:", int(total_bayar))
+#Meminta input dari user
+harga_buku = int(input("Masukkan harga buku: "))
+harga_pensil = int(input("Masukkan harga pensil: "))
+jumlah_buku = int(input("Masukkan jumlah buku: "))
+jumlah_pensil = int(input("Masukkan jumlah pensil: "))
+total = (jumlah_buku * harga_buku) + (jumlah_pensil * harga_pensil)
+pajak = 0.10 * total
+total_bayar = total + pajak
+print("Total sebelum pajak:", total)
+print("Pajak (10%):", int(pajak))
+print("Total yang harus dibayar:", int(total_bayar))
 
 
 # # Soal 2
-# p = int(input("Masukkan panjang: "))
-# l = int(input("Masukkan lebar: "))
-# t= int(input("Masukkan tinggi: "))
-# volume = p * l * t
-# luas_permukaan = 2 * (p*l + p*t + l*t)
-# print("Volume balok:", volume, "cm³")
-# print("Luas permukaan balok:", luas_permukaan, "cm²")
+p = int(input("Masukkan panjang: "))
+l = int(input("Masukkan lebar: "))
+t= int(input("Masukkan tinggi: "))
+volume = p * l * t
+luas_permukaan = 2 * (p*l + p*t + l*t)
+print("Volume balok:", volume, "cm³")
+print("Luas permukaan balok:", luas_permukaan, "cm²")
 
 # # Soal 3
-# import math
-# bola_merah = int(input("Jumlah bola merah: "))
-# bola_biru = int(input("Jumlah bola biru: "))
-# bola_diambil = int(input("Jumlah yang diambil sekaligus: "))
+import math
+bola_merah = int(input("Jumlah bola merah: "))
+bola_biru = int(input("Jumlah bola biru: "))
+bola_diambil = int(input("Jumlah yang diambil sekaligus: "))
 
-# total_bola = bola_merah + bola_biru
-# hasil = math.comb(total_bola, bola_diambil)
+total_bola = bola_merah + bola_biru
+hasil = math.comb(total_bola, bola_diambil)
 
-# print("=" * 10, "Hasil Perhitungan","=" * 10)
-# print("Jumlah bola merah :", bola_merah)
-# print("Jumlah bola biru  :", bola_biru)
-# print("Total bola        :", total_bola)
-# print("Diambil sekaligus :", bola_diambil)
-# print("Kombinasi         :", hasil)
+print("=" * 10, "Hasil Perhitungan","=" * 10)
+print("Jumlah bola merah :", bola_merah)
+print("Jumlah bola biru  :", bola_biru)
+print("Total bola        :", total_bola)
+print("Diambil sekaligus :", bola_diambil)
+print("Kombinasi         :", hasil)
