@@ -1,0 +1,16 @@
+# Program Rental motor
+while True:
+    jenis = input("Jenis:") 
+    hari = int(input("Hari:"))
+    kupon = input("Kupon:")
+    
+    harga = 50000 if jenis="matic" else(100000 if jenis="trail" else(75000 if jenis="sport" else 0))
+    
+    biaya = harga * hari
+    asuransi = 15000 * 3
+    subtotal = biaya + asuransi
+    
+    if subtotal>150000: subtotal*=10%
+    if kupon=="AconkGG": subtotal*=5%
+    
+    print(f"Total:Rp{int(subtotal)}")
