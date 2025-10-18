@@ -1,0 +1,18 @@
+merah = 8
+biru = 6
+ambil = 3
+
+kombinasi_3_merah = (merah * (merah-1) * (merah-2)) // (3 * 2 * 1)
+kombinasi_2_merah_1_biru = ((merah * (merah-1)) // (2 * 1)) * biru
+kombinasi_2_merah_1_biru = ((merah * (merah-1)) // (2 * 1)) * biru
+kombinasi_1_merah_2_biru = merah * ((biru * (biru-1)) // (2 * 1))
+kombinasi_3_biru = (biru * (biru-1) * (biru-2)) // (3 * 2 * 1)
+
+total_kemungkinan = kombinasi_3_merah + kombinasi_2_merah_1_biru + kombinasi_1_merah_2_biru + kombinasi_3_biru
+
+print(f"Kemungkinan kombinasi bola yang dapat diambil:")
+print(f"- 3 bola merah: {kombinasi_3_merah} cara")
+print(f"- 2 bola merah + 1 bola biru: {kombinasi_2_merah_1_biru} cara")
+print(f"- 1 bola merah + 2 bola biru: {kombinasi_1_merah_2_biru} cara")
+print(f"- 3 bola biru: {kombinasi_3_biru} cara")
+print(f"\nTotal kemungkinan kombinasi: {total_kemungkinan} cara")
