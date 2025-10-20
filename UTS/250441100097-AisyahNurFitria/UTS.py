@@ -1,12 +1,21 @@
-#buat program rental motor
+#Program rental motor Aconk
 
-motor_matic = 50.000
-motor_trail = 100.000
-motor_sport = 75.00000
+while True:
+    print("\n=== RENTAL MOTOR ACONK ===")
+    print("1.motor_matic  = Rp50.000/hari")
+    print("2.motor_trail  = Rp100.000/hari")
+    print("3.motor_sport  = Rp75.000/hari")
 
-jenis_motor = input("masukkan jenis motor : ")
+    jenis = input("masukkan jenis motor (matic/trail/sport): ").lower()
+    lama = int(input("masukkan lama sewa (hari): "))
 
-asuransi = 15.000 ("berlaku kelipatan")
-lama_sewa = 3
-total = 0
-
+    #harga sewa per jenis motor
+    if jenis == "matic":
+        harga = 50000
+    elif jenis == "trail":
+        harga = 100000
+    elif jenis == "sport":
+        harga = 75000
+    else:
+        print("Jenis motor tidak tersedia!")
+        continue
