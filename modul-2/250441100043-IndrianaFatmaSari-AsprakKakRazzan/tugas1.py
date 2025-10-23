@@ -45,3 +45,8 @@ else:
     print("lama parkir :", lama_parkir)
     print("status VIP :", status_vip)
     print("total bayar parkir : Rp", total_bayar )
+
+
+
+
+

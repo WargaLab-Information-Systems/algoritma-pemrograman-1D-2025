@@ -12,4 +12,3 @@ print("lebar =", lebar, "cm")
 print("tinggi =", tinggi, "cm")
 print("vlume balok =", volume, "cm^3")
 print("luas balok=", luas_permukaan, "cm^2")
-
