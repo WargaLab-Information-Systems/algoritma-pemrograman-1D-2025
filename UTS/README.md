@@ -1,3 +1,4 @@
+menginput jenis motor yang ingin disewa kemudian menanyakan apakah penyewa memiliki voucher kemdian sistem akan menghitung berapa total pembayaran yang harus dibayarkan penyewa kemudian looping akan terus berjalan 
 membuat program penyewaan motor dengan diskon - diskon tertentu.
 menggunakan while agar dapat mengulang berulang kali karena tidak diketahui batas inputnya. 
 lalu memasukkan inputan nama, jenis motor, harga sewa, dan jumlah hari.
