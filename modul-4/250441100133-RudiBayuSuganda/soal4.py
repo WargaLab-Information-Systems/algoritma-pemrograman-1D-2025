@@ -10,6 +10,4 @@ for i in range(1,n+1):
     
     for k in range(1,i+1):
          print(f"{k:{lebar}}", end="")
-    # # for k in range(i,0,-1):
-    #     print(f"{k:{lebar}}", end="")
     print()
