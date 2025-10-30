@@ -1,0 +1,1 @@
+dari soal yang dikerjakan kita disuruh untuk membuat bagaimana cara menyelesaikan program rental motor aconk dalam kode python yang dimana jika 3 hari penyewaan maka ada asuransi sebesar 15000, dan ada diskon 10% jika subtotal sebesar 150000 serta ada diskon tambahan 5 % jika aconkgg.![alt 
