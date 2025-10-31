@@ -1,0 +1,88 @@
+#modul4
+#soal1
+
+bbaris = int(input("Masukan jumlah baris lampu : "))
+
+for baris in range(1,bbaris+1):
+    jumlahlampu = int(input(f"Masukan Jumlah lampu pada baris {baris} : "))
+    
+    for lampu in range (1,jumlahlampu+1):
+        if lampu % 3 == 0:
+            print(f"Lampu ke {lampu} pada baris {baris} Rusak")
+        else:
+            print(f"Lampu ke {lampu} pada baris {baris} Menyala")
+    
+    if baris == bbaris:
+        print("Periksa sambungan daya utama")
+
+
+
+# modul4
+# soal2
+
+
+# Program menghitung gaji Pak Wowo selama 7 hari
+
+upah_mingguan = 0
+jam_total = 0
+bonus_total = 0
+
+for hari_ke in range(1, 8):
+    print("\nHari ke-" + str(hari_ke))
+    lembur = int(input("Masukkan jumlah jam lembur: "))
+    malam = input("Apakah shift malam? (y/n): ")
+
+    upah_harian = 100000
+    upah_lembur = 0
+    tambahan_shift = 0
+
+    if 1 <= lembur <= 3:
+        upah_lembur = lembur * 25000
+    elif lembur == 4:
+        upah_lembur = 100000
+    elif lembur == 5:
+        upah_lembur = 125000
+    elif lembur == 6:
+        upah_lembur = 200000
+    elif lembur == 7:
+        upah_lembur = 225000
+    elif lembur == 8:
+        upah_lembur = 300000
+    elif lembur > 8:
+        print("Jam lembur melebihi batas, tidak dihitung.")
+        lembur = 0
+
+    if malam == "y" and lembur > 0:
+        tambahan_shift = 50000
+
+    upah_mingguan += upah_harian + upah_lembur + tambahan_shift
+    jam_total += lembur
+    bonus_total += tambahan_shift
+
+print("\nRekap Mingguan")
+print("Total jam lembur       :", jam_total, "jam")
+print("Total bonus shift malam: Rp", bonus_total)
+print("Total gaji seminggu    : Rp", upah_mingguan)
+
+
+
+# modul4
+# soal3
+# Program piramida angka sederhana
+
+n = int(input("Masukkan jumlah baris:"))
+
+for i in range(1, n + 1):
+    # kiri
+    for kiri in range(1, i + 1):
+        print(f"{kiri:2}", end="")  # lebar 2 untuk setiap angka
+
+    # spasi
+    for space in range((n - i) * 4):  # spasi dikali 4 supaya cukup luas
+        print(" ", end="")
+
+    # kanan
+    for kanan in range(i, 0, -1):
+        print(f"{kanan:2}", end="")
+
+    print()
