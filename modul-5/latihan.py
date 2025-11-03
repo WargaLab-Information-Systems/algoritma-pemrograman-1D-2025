@@ -29,7 +29,7 @@
 #     return c
 # print(perkalian(perkalian(angka)))
 
-# #lambda
+#lambda
 # tambah = lambda a,b: a+b 
 # print(tambah(1, 2))
 
