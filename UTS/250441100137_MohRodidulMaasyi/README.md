@@ -1,0 +1,2 @@
+Jadi, pada soal UTS tersebut meminta untuk kita membuat program menghitung rental motor
+pada program tersebut saya hanya menggunakan if untuk melakukan penyeleksian kondisi agar bisa mengetahui motor yang mana yang akan disewa.
