@@ -1,9 +1,8 @@
-motor_matic, motor_trail, motor_sport : harga sewa untuk masing-masing jenis motor.
+# Repository praktikum Algoritma Pemrograman 1A-2025
 
-sewa : batas hari minimal untuk mendapatkan diskon (contohnya 3 hari).
+**Repository Praktikum ALPRO-1A-2025.**
 
-asuransi : biaya tambahan asuransi sewa.
+Kumpulkan Tugas di folder ini yang sudah dibuat, penamaan folder dengan **format NIM-NamaLengkap-NamaLengkapAsprak**, dan untuk nama tidak menggunakan spasi, namun diganti dengan huruf kapital di setiap nama atau awal kalimat
+**contoh**: **230441100026-Ar'raffiAbqoriNurAzizi-AsprakKakRapi**
 
-diskon : besarnya potongan harga dalam bentuk desimal (0.10 = 10%).
-
-penyewaan : jumlah hari motor disewa oleh pelanggan.
+Kumpulkan tugas yang sudah dibuat di folder yang sudah disediakan dan kumpulkan tugas ketika sudah melakukan asistensi kepada Asisten Praktikum.
