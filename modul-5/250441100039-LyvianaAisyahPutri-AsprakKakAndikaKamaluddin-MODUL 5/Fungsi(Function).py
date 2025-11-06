@@ -116,3 +116,4 @@ jabatan = input("Masukkan jabatan (Manager/Staff): ")
 gaji_pokok = float(input("Masukkan gaji pokok: "))
 
 hitung_gaji(nama, jabatan, gaji_pokok)
+
