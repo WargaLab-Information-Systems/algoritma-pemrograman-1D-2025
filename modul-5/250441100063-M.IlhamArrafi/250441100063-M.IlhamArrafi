@@ -1,0 +1,87 @@
+#modul5
+#soal1
+
+def faktorial(n):
+    hasil = 1
+    print("Proses: ", end="") 
+
+    for i in range(n, 0, -1): 
+        print(i, end="") 
+        if i > 1:
+            print(" x ", end="")
+        hasil = hasil * i
+
+    print(" =", hasil)  
+    return hasil
+
+angka = int(input("Masukkan angka: "))
+faktorial(angka)
+
+
+#modul5
+#soal2
+
+# Soal 2: Program cek anagram
+
+def cek_anagram(kata1, kata2):
+    
+    if not kata1.isalpha() or not kata2.isalpha():
+        print("Input harus berupa huruf, bukan angka atau simbol!")
+        return
+
+    
+    kata1 = kata1.lower()
+    kata2 = kata2.lower()
+
+    
+    if sorted(kata1) == sorted(kata2):
+        print(f"'{kata1}' dan '{kata2}' adalah anagram.")
+    else:
+        print(f"'{kata1}' dan '{kata2}' bukan anagram.")
+
+
+
+kata1 = input("Masukkan kata pertama: ")
+kata2 = input("Masukkan kata kedua: ")
+
+cek_anagram(kata1, kata2)
+
+#modul 5
+#soal 3
+
+# Soal 3: Fungsi menghitung gaji bersih karyawan
+
+def hitung_gaji(nama, jabatan, gaji_pokok):
+    pph = 0.05 * gaji_pokok  # Pajak 5%
+    
+    if jabatan.lower() == "manager":
+        tunjangan = 0.10 * gaji_pokok
+    elif jabatan.lower() == "staff":
+        tunjangan = 0.05 * gaji_pokok
+    else:
+        tunjangan = 0
+    
+    gaji_bersih = gaji_pokok - pph + tunjangan
+    return gaji_bersih, pph, tunjangan
+
+
+# Input data
+nama = input("Masukkan nama karyawan: ")
+jabatan = input("Masukkan jabatan (Manager/Staff): ")
+gaji_pokok = float(input("Masukkan gaji pokok: "))
+
+# Hitung gaji
+gaji_bersih, pajak, tunjangan = hitung_gaji(nama, jabatan, gaji_pokok)
+
+# Tampilkan hasil
+print("\n=== HASIL PERHITUNGAN GAJI ===")
+print(f"Nama: {nama}")
+print(f"Jabatan: {jabatan}")
+print(f"Gaji Pokok: Rp{gaji_pokok:,.2f}")
+print(f"Pajak (5%): Rp{pajak:,.2f}")
+print(f"Tunjangan: Rp{tunjangan:,.2f}")
+print(f"Gaji Bersih: Rp{gaji_bersih:,.2f}")
+
+# Info tambahan
+if pajak > 0:
+    print("\nKaryawan dikenakan pajak sebesar 5% dari gaji pokok.")
