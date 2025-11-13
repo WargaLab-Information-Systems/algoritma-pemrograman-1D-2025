@@ -21,3 +21,4 @@ for i in range(1, n + 1):
 #     for angka in range(i - 1, 0, -1):
 #         print(angka, end="")
 #     print()
+#s
