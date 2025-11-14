@@ -1,0 +1,221 @@
+# Program Sistem Kunjungan Santri
+# Modul 6 - List & Tuple
+
+data_kunjungan = [] 
+id_antrian = 1  
+
+def tambah_data():
+    global id_antrian
+    print("\n=== Tambah Data Kunjungan ===")
+    nama_pengunjung = input("Masukkan nama pengunjung: ")
+    if not nama_pengunjung.replace(" ", "").isalpha():
+        print("❌ Nama pengunjung hanya boleh huruf!")
+        return
+
+    nama_santri = input("Masukkan nama santri yang dijenguk: ")
+    if not nama_santri.replace(" ", "").isalpha():
+        print("❌ Nama santri hanya boleh huruf!")
+        return
+
+    daerah = input("Masukkan asal pengunjung (Sumatra/Kalimantan/Jawa): ").capitalize()
+    if daerah not in ["Sumatra", "Kalimantan", "Jawa"]:
+        print("❌ Daerah tidak valid! Pilih: Sumatra, Kalimantan, atau Jawa.")
+        return
+
+   
+    data_kunjungan.append([id_antrian, nama_pengunjung, nama_santri, daerah])
+    print(f"✅ Data berhasil ditambahkan dengan ID antrian {id_antrian}!")
+    id_antrian += 1
+
+
+def tampilkan_data():
+    print("\n=== Daftar Kunjungan Santri ===")
+    if not data_kunjungan:
+        print("Belum ada data kunjungan.")
+        return
+
+    
+    urutan = ["Sumatra", "Kalimantan", "Jawa"]
+    for daerah in urutan:
+        for data in data_kunjungan:
+            if data[3].lower() == daerah.lower():
+                print(f"ID {data[0]} | Pengunjung: {data[1]} | Santri: {data[2]} | Asal: {data[3]}")
+
+
+def hapus_data():
+    print("\n=== Hapus Data Kunjungan ===")
+    try:
+        hapus_id = int(input("Masukkan ID antrian yang ingin dihapus: "))
+        for data in data_kunjungan:
+            if data[0] == hapus_id:
+                data_kunjungan.remove(data)
+                print(f"✅ Data dengan ID {hapus_id} berhasil dihapus!")
+                return
+        print("❌ ID tidak ditemukan.")
+    except ValueError:
+        print("❌ ID harus berupa angka!")
+
+
+
+while True:
+    print("\n===== SISTEM KUNJUNGAN SANTRI =====")
+    print("1. Tambah Data Kunjungan")
+    print("2. Tampilkan Data Kunjungan")
+    print("3. Hapus Data Kunjungan")
+    print("4. Keluar")
+
+    pilihan = input("Pilih menu (1-4): ")
+
+    if pilihan == "1":
+        tambah_data()
+    elif pilihan == "2":
+        tampilkan_data()
+    elif pilihan == "3":
+        hapus_data()
+    elif pilihan == "4":
+        print("Terima kasih! Program selesai.")
+        break
+    else:
+        print("❌ Pilihan tidak valid, coba lagi!") 
+
+
+#soal 2
+#modul 6
+
+data_mahasiswa = []  
+
+while True:
+    print("\n=== INPUT DATA MAHASISWA ===")
+    nama = input("Masukkan nama mahasiswa: ")
+
+   
+    if not nama.replace(" ", "").isalpha():
+        print("Nama hanya boleh huruf!")
+        continue
+
+    try:
+        nilai = float(input("Masukkan nilai mahasiswa: "))
+    except ValueError:
+        print("Nilai harus berupa angka!")
+        continue
+
+    
+    
+    data_mahasiswa.append((nama, nilai))
+
+    lagi = input("Tambah data lagi? (y/n): ").lower()
+    if lagi != "y":
+        break
+
+print("\n=== DAFTAR NILAI MAHASISWA ===")
+for i, data in enumerate(data_mahasiswa, start=1):
+    print(f"{i}. Nama: {data[0]} | Nilai: {data[1]}")
+
+
+if data_mahasiswa:
+    total = sum([nilai for _, nilai in data_mahasiswa])
+    rata = total / len(data_mahasiswa)
+    print(f"\nRata-rata nilai mahasiswa: {rata:.2f}")
+else:
+    print("\nBelum ada data yang dimasukkan.")
+
+
+
+#soal 3
+#modul 6
+
+def hitung_total(data):
+    total = 0
+    for angka in data:
+        total += angka
+    return total
+
+def cekpembagian(data):
+    total = hitung_total(data)
+    setengah = total / 2
+    temp = 0
+
+    for i in range(len(data)):
+        temp += data[i]
+        if temp == setengah:
+            kiri = data[:i+1]
+            kanan = data[i+1:]
+            return True, kiri, kanan
+    return False, [], []
+
+def tampilkan_data(data):
+    if not data:
+        print("Daftar angka masih kosong.")
+    else:
+        print("Daftar angka saat ini:", data)
+
+def tambah_data(data):
+    angka = input("Masukkan angka (bisa lebih dari 1, pisahkan dengan spasi): ")
+    angka = angka.replace(",", " ").split()
+    for a in angka:
+        if a.isdigit():
+            data.append(int(a))
+        else:
+            print(a, "bukan angka, di-skip.")
+
+def ubah_data(data):
+    tampilkan_data(data)
+    try:
+        indeks = int(input("Masukkan indeks angka yang ingin diubah: "))
+        if 0 <= indeks < len(data):
+            angka_baru = int(input("Masukkan angka baru: "))
+            data[indeks] = angka_baru
+            print("Data berhasil diubah.")
+        else:
+            print("Indeks tidak ditemukan.")
+    except ValueError:
+        print("Input tidak valid!")
+
+def hapus_data(data):
+    tampilkan_data(data)
+    try:
+        indeks = int(input("Masukkan indeks angka yang ingin dihapus: "))
+        if 0 <= indeks < len(data):
+            data.pop(indeks)
+            print("Data berhasil dihapus.")
+        else:
+            print("Indeks tidak ditemukan.")
+    except ValueError:
+        print("Input tidak valid!")
+
+def menu():
+    data = []
+    while True:
+        print("\nPROGRAM PEMBAGIAN ANGKA")
+        print("1. Tambah")
+        print("2. Tampilkan")
+        print("3. Ubah")
+        print("4. Hapus")
+        print("5. Cek pembagian dua bagian dengan jumlah sama")
+        print("0. Keluar")
+
+        pilihan = input("Pilih menu: ")
+
+        if pilihan == "1":
+            tambah_data(data)
+        elif pilihan == "2":
+            tampilkan_data(data)
+        elif pilihan == "3":
+            ubah_data(data)
+        elif pilihan == "4":
+            hapus_data(data)
+        elif pilihan == "5":
+            tampilkan_data(data)
+            hasil, kiri, kanan = cekpembagian(data)
+            if hasil:
+                print(f"✅ Deretan dapat dibagi dua bagian dengan jumlah sama:")
+                print(f"Bagian 1: {kiri} dan Bagian 2: {kanan}")
+            else:
+                print("❌ Deretan tidak dapat dibagi menjadi dua bagian dengan jumlah yang sama.")
+        elif pilihan == "0":
+            print("Terima kasih! Program selesai.")
+            break
+        else:
+            print("Pilihan tidak valid!")
+
+menu()    
