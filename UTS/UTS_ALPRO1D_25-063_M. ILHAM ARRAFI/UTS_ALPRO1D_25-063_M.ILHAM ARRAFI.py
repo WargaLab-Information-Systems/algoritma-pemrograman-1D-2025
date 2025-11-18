@@ -9,5 +9,4 @@ motor_matic < 10.0
 
 
  
-for i in range:
-    if 
+if 
