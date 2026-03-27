@@ -1,0 +1,81 @@
+angka = []
+
+def tambah():
+    n = (input("Masukkan angka: "))
+    for i in n :
+        angka.append(int(i))
+
+
+def tampilkan():
+    print("Daftar angka:", angka)
+
+def ubah():
+    if not angka :
+        print("ga bisa dongg,kan belum masuk angka!\n")
+        return
+    
+    tampilkan()
+    idx = int(input("Masukkan indeks angka yang ingin diubah: "))
+    if 0 <= idx < len(angka):
+        angka[idx] = int(input("Masukkan angka baru: "))
+    else:
+        print("Indeks tidak valid.")
+
+def hapus():
+    if not angka :
+        print("ga bisa dongg,kan belum masuk angka!\n")
+        return
+    
+    tampilkan()
+    idx = int(input("Masukkan indeks angka yang ingin dihapus: "))
+    if 0 <= idx < len(angka):
+        del angka[idx]
+    else:
+        print("Indeks tidak valid.")
+
+def cek_bisa_dibagi():
+    if not angka :
+        print("ga bisa dongg,kan belum masuk angka!\n")
+        return
+    
+    total = 0
+    for i in angka:
+        total += i
+
+    if total % 2 != 0:
+        print("False (jumlah total ganjil, tidak bisa dibagi sama)")
+        return
+
+    setengah = total // 2
+    sum_kiri = 0
+    for i in angka:
+        sum_kiri += i
+        if sum_kiri == setengah:
+            print("True (dapat dibagi menjadi dua bagian sama besar)")
+            return
+    print("False (tidak dapat dibagi dua bagian sama besar)")
+
+while True:
+    print("\n=== PROGRAM PEMERIKSAAN ANGKA ===")
+    print("1. Tambah angka (create)")
+    print("2. Tampilkan angka (read)")
+    print("3. Ubah angka (update)")
+    print("4. Hapus angka(delete)")
+    print("5. Cek pembagian sama besar")
+    print("6. Keluar")
+    menu = input("Pilih menu: ")
+
+    if menu == "1":
+        tambah()
+    elif menu == "2":
+        tampilkan()
+    elif menu == "3":
+        ubah()
+    elif menu == "4":
+        hapus()
+    elif menu == "5":
+        cek_bisa_dibagi()
+    elif menu == "6":
+        break
+    else:
+        print("Pilihan tidak valid.")
